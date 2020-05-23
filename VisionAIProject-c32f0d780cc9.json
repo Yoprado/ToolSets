@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "visionaiproject",
+  "private_key_id": "c32f0d780cc9b21a5b0a026ba078ca0013c0b662",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyXnOGgam71wTb\nE2+GKS2N34TpPiNJSRbfTcTzATGJWYr6/jPF+8+bBHQM8s1KJK9JIzYibLc7USlY\nTEwI+RF0KqbhL5GoqqNlRRyxZpKDO6wA8Xj/2a8A3gxGfs7yLOzAe2wNCDruBSHp\nBkcbgdzNdeH9QavJKfTGC7WvpmP/mOTbUi/Eb1AFrGOr5MD6Bow7nJ7ORnsojMzf\n0FfS4lcoHPhyKx+TfmLKsRswGW5RssMomO+Q7H1+YOUvsNlRsvUB5gF4Eha5dNpa\nZhk4Dq9nQ4N48RCeqGQXhvgwhFfTs36sV9KCUITrTxVBg38PEamb+LTlsPuznx/S\nf0303LBbAgMBAAECggEAAwWd+Bxq72zFf0oFV1o2lF3CFwrfdta51XoFfockULW8\nqLif0JiN5uFyGeS53P9hcjVvgwZ2gEHFbTfgXefiXNElgfvYAD82hM5hSGbQJVBg\nf0+YA4sA77HTYWpf6oh0+7nblcjwPqdwRfi+Qaq3Pp/i/p3F4aLyq7GibWG99fmY\n4oj3RaDkpK3n6rQdywROrvB8XmDzcv4fJGq1SlopgXbS2hAymeytn39/+DaokOJB\nwquqsKMysmT9djZwasYVR3A17RjuiLH4b3euj8rWPSk8QvuTwjTE26v1ds9hXMcv\nzQ08nSgg7d5HT5+IGoeHatSKt539EfsJzAUAWaOH0QKBgQDsdXeWSWt1cmKW1JFW\njLaU4z9WR4fnHexjbvI76b9Dp4CdlS9aRyTn7dZEx0ISsaGX5iobNWwpqHOP65zF\nzDGBR4guB/2JMUctoHE+6pSmzH/IKbh3yqH0QSux+/RwKnmbwQFHaKBkp8+1bnSs\n5alr03zmJgZ+RHTTxzWthXbPIwKBgQDBHAgkN+I0vx89SplQpnfsJPyvFJ6lk8GB\nN+BnwGCD3zf85agT0IzsLnH6Xch/xnU84DEvvkjDD2i3cDchTlzvME0Qituwbsb3\nydaQzEU6VFWAslKiGcN7fo4LFMfQkYFhcUkYHPmnwfN1hRZqZSFk+PzfY6m3d0ll\nsy7L3RiJaQKBgQDOykQVOIwzoB88TRX1nQWn27zuVYwywOaUZtiNMPTF090U8v0A\ndKt/8W2rpJ7R/mqVjwJP3T6Eh/7YZHMsQFEjAE3GA9LkgiX/bwravQfXf4xYnrPm\nf113YO83rmKtHVhQsE/QBV4P6Porbze2ZPrvg3r9Q0/2aSPKebMl10x6BQKBgGr0\nZaX5tbXVLS47RRMgQEdwbOtjlkLKxWAWXJnaORqQ5WeSozbmSUb+qm4qx0PN3V0s\nJtH0qEQxIqSG6GHwDxUDQYup/OeJU3YmOkrUeHtH/ltbaN0TO+wIOg/1IH5qOKiJ\noBxU4AmEKJ2saq/e91H/fb8UagmNbf9/8KlE+bQRAoGBAKROEfgG5CNl9hFlvlJf\nf2qMSx1/tbDQYepk4oqExNolMlOjgTv6RdA5ykJDSWZAPL8kK7GElBYYGj06gnbm\nrGk7SFFdEfFRKXQtQqwftgnMhEhdCVg0CKARe7CkhKOSwxWZy7kQveEW1c3nphRT\nSR/NXp8X79YccWyRImzKsh7z\n-----END PRIVATE KEY-----\n",
+  "client_email": "yoprado@visionaiproject.iam.gserviceaccount.com",
+  "client_id": "100765105875692922173",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/yoprado%40visionaiproject.iam.gserviceaccount.com"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://iphoneimages2020.s3-us-west-1.amazonaws.com/IMG_4767.jpg",
+    "searchterms": [
+      {
+        "description": "Drink",
+        "score": 0.9383060932159424
+      },
+      {
+        "description": "Wine glass",
+        "score": 0.914750337600708
+      },
+      {
+        "description": "Stemware",
+        "score": 0.8542686700820923
+      },
+      {
+        "description": "Alcoholic beverage",
+        "score": 0.836335301399231
+      },
+      {
+        "description": "Glass",
+        "score": 0.8151659369468689
+      },
+      {
+        "description": "Alcohol",
+        "score": 0.7574023008346558
+      },
+      {
+        "description": "Champagne stemware",
+        "score": 0.730770468711853
+      },
+      {
+        "description": "Drinkware",
+        "score": 0.6805765628814697
+      },
+      {
+        "description": "Distilled beverage",
+        "score": 0.6763579249382019
+      },
+      {
+        "description": "Wine",
+        "score": 0.6725698113441467
+      }
+    ]
+  }
+]
