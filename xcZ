@@ -1,0 +1,79 @@
+[33mcommit 00a3432598203f43a55709aede4821b4214cde02[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: York Prado <Yoprado@gmail.com>
+Date:   Sat May 23 14:38:06 2020 -0700
+
+    finsihed working on pulling from s3 bucket and labeling one image and outputting it
+
+[1mdiff --git a/GoogleVisionScript.js b/GoogleVisionScript.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..75bef9b[m
+[1m--- /dev/null[m
+[1m+++ b/GoogleVisionScript.js[m
+[36m@@ -0,0 +1,66 @@[m
+[32m+[m[32mconst S3 = require('aws-sdk/clients/s3');[m
+[32m+[m
+[32m+[m[32mlet s3BucketList= [];[m
+[32m+[m[32mconst vision = require('@google-cloud/vision');[m
+[32m+[m[32mconst imageClient = new vision.ImageAnnotatorClient();[m
+[32m+[m
+[32m+[m[32m// Here we hide the pagination details[m
+[32m+[m[32masync function* ListObjects(s3, params) {[m
+[32m+[m[32m  let isTruncated = false;[m
+[32m+[m[32m  let token;[m
+[32m+[m[32m  do {[m
+[32m+[m[32m    const response = await s3.listObjectsV2({[m[41m [m
+[32m+[m[32m        ...params, ContinuationToken: token[m
+[32m+[m[32m    }).promise();[m
+[32m+[m
+[32m+[m[32m    // One could also yield each item separately[m
+[32m+[m[32m    yield response.Contents;[m
+[32m+[m
+[32m+[m[32m    ({ IsTruncated: isTruncated, NextContinuationToken: token  } = response);[m
+[32m+[m[32m  } while (isTruncated)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32masync function main() {[m
+[32m+[m[32m  const s3 = new S3({ params: { Bucket: 'iphoneimages2020' }});[m
+[32m+[m
+[32m+[m[32m  // Usage of the for-await syntax hides the pagination details[m
+[32m+[m[32m  for await (const contents of ListObjects(s3, { MaxKeys: 1000})) {[m
+[32m+[m[32m    const objects = contents.map(({ Key }) => 'https://iphoneimages2020.s3-us-west-1.amazonaws.com/' + Key);[m
+[32m+[m[32m    for(url of objects) {[m
+[32m+[m[32m      s3BucketList.push({URL:url});[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mmain().then(() => classifyImage(s3BucketList[4].URL, function(imageLabels, dominantColors) { console.log(imageLabels, dominantColors);}));[m
+[32m+[m
+[32m+[m[32m// classifyImage() function[m
+[32m+[m[32mconst classifyImage = (image, cb) => {[m
+[32m+[m[32m  console.log(image);[m
+[32m+[m[32m  // Use the locally stored image from the upload[m
+[32m+[m[32m  const imageToClassify = `${image}`;[m
+[32m+[m
+[32m+[m[32m  // Ask Google Vision what it thinks this is an image of[m
+[32m+[m[32m  imageClient[m
+[32m+[m[32m  .labelDetection(imageToClassify)[m
+[32m+[m[32m  .then(results => {[m
+[32m+[m[32m    const imageLabels = results[0].labelAnnotations;[m
+[32m+[m
+[32m+[m[32m      // Also ask for the dominant colors to use as search attributes[m
+[32m+[m[32m      imageClient[m
+[32m+[m[32m      .imageProperties(imageToClassify)[m
+[32m+[m[32m      .then(results => {[m
+[32m+[m[32m        const properties = results[0].imagePropertiesAnnotation;[m
+[32m+[m[32m        const dominantColors = properties.dominantColors.colors;[m
+[32m+[m
+[32m+[m[32m        // Pass both lists back in the callback[m
+[32m+[m[32m        cb(imageLabels, results);[m
+[32m+[m[32m      })[m
+[32m+[m[32m      .catch(err => {[m
+[32m+[m[32m        console.error('Error:', err);[m
+[32m+[m[32m      })[m
+[32m+[m[32m  })[m
+[32m+[m[32m  .catch(err => {[m
+[32m+[m[32m    console.error('Error:', err);[m
+[32m+[m[32m  });[m
+[32m+[m[32m};[m
+\ No newline at end of file[m
