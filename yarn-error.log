@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add google-auth-librayr
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js remove ts-exif-parser
 
 PATH: 
-  C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Python27;C:\Python27\Scripts;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Perforce\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\OpenSSL\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Amazon\AWSCLIV2\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\York\AppData\Roaming\npm;C:\Users\York\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\York\AppData\Local\Yarn\bin;C:\Users\York\AppData\Local\Microsoft\WindowsApps;C:\Program Files\dfu-util;
+  C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Python27;C:\Python27\Scripts;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Perforce\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\OpenSSL\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Amazon\AWSCLIV2\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\York\AppData\Roaming\npm;C:\Users\York\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\York\AppData\Local\Yarn\bin;C:\Users\York\AppData\Local\Microsoft\WindowsApps;C:\Program Files\dfu-util
 
 Yarn version: 
   1.22.4
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/google-auth-librayr: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
-      at Request.emit (events.js:321:20)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
-      at Request.emit (events.js:321:20)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
-      at Object.onceWrapper (events.js:427:28)
-      at IncomingMessage.emit (events.js:333:22)
-      at endReadableNT (_stream_readable.js:1201:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  Error: EPERM: operation not permitted, unlink 'C:\Users\York\Documents\YorkPradoPersonal\googleVisionIphone\node_modules\ts-exif-parser\lib'
 
 npm manifest: 
   {
@@ -32,7 +22,8 @@ npm manifest:
       "@google-cloud/storage": "^5.0.1",
       "@google-cloud/vision": "^1.11.0",
       "aws-sdk": "^2.682.0",
-      "axios": "^0.19.2"
+      "axios": "^0.19.2",
+      "google-auth-library": "^6.0.0"
     }
   }
 
@@ -852,7 +843,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
     integrity sha1-e45lYZCyKOgaZq6nSEgNgozS03o=
   
-  sax@>=0.6.0:
+  sax@1.2.4, sax@>=0.6.0:
     version "1.2.4"
     resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
     integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -928,6 +919,13 @@ Lockfile:
     integrity sha512-M96dvTalPT3YbYLaKaCuwu+j06D/8Jfib0o/PxbVt6Amhv3dUAtW6rTV1jPgJSBG83I/e04Y6xkVdVhSRhi0ww==
     dependencies:
       readable-stream "2 || 3"
+  
+  ts-exif-parser@^0.1.6:
+    version "0.1.6"
+    resolved "https://registry.yarnpkg.com/ts-exif-parser/-/ts-exif-parser-0.1.6.tgz#22725c7354c3d79cf15a0fdb90f2c270d9c17cd4"
+    integrity sha512-2Xg6LHubJP9+yKPF7SQeVLeUlzsnYj7EUIO6+PdSfROiwc9AprXvM4ZaQt0t89XskIlkOWwxfseymihSU8rsLg==
+    dependencies:
+      sax "1.2.4"
   
   typedarray-to-buffer@^3.1.5:
     version "3.1.5"
