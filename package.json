@@ -3,7 +3,7 @@
     "@google-cloud/storage": "^5.0.1",
     "@google-cloud/vision": "^1.11.0",
     "aws-sdk": "^2.682.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "exif-parser": "^0.1.12",
     "google-auth-library": "^6.0.0",
     "sharp": "^0.25.3"
